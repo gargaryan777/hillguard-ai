@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "workspace": {
+    "name": "hillguard-ui",
+    "kind": "folder"
+  },
+  "apps": [
+    {
+      "id": "app",
+      "name": "hillguard-ui",
+      "folder": ".",
+      "framework": "Next.js",
+      "platform": "web",
+      "default": true
+    }
+  ]
+}

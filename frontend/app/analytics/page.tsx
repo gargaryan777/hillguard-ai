@@ -1,0 +1,7 @@
+"use client";
+
+import PresentationCanvas from "@/components/phone/PresentationCanvas";
+
+export default function AnalyticsPage() {
+  return <PresentationCanvas />;
+}

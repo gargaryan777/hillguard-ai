@@ -1,0 +1,29 @@
+{
+  "name": "Hillguard AI - Landslide Early Warning System",
+  "short_name": "Hillguard AI",
+  "description": "AI-powered early warning and landslide risk monitoring system for the North Eastern Region of India",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#020617",
+  "orientation": "any",
+  "scope": "/",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["utilities", "weather", "public safety"],
+  "screenshots": [],
+  "prefer_related_applications": false
+}
