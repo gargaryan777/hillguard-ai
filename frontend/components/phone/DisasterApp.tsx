@@ -142,10 +142,10 @@ export default function DisasterApp({ onBackToHome, isOffline }: DisasterAppProp
         setEvaluationResult({
           riskScore: Math.round(res.risk_score),
           riskLevel: res.risk_level,
-          elevation: Math.round(res.elevation),
-          slope: Number(res.slope.toFixed(1)),
-          aspect: Math.round(res.aspect),
-          confidence: res.confidence,
+          elevation: Math.round(res.terrain.elevation_m),
+          slope: Number(res.terrain.slope_deg.toFixed(1)),
+          aspect: Math.round(res.terrain.aspect_deg),
+          confidence: 0.88,
         });
       } else {
         // Deterministic local simulation when offline

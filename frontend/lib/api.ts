@@ -306,11 +306,12 @@ export async function bulkSyncReports(
 
 export async function evaluateTerrain(
   latitude: number,
-  longitude: number
+  longitude: number,
+  simulated_rain?: number
 ): Promise<TerrainEvaluation> {
   return fetchAPI<TerrainEvaluation>("/api/evaluate", {
     method: "POST",
-    body: JSON.stringify({ latitude, longitude }),
+    body: JSON.stringify({ latitude, longitude, simulated_rain }),
   });
 }
 
