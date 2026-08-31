@@ -1,0 +1,23 @@
+# Render Blueprint — one-click deploy for HillGuard AI backend
+# Docs: https://render.com/docs/blueprint-spec
+#
+# After your first deploy, copy the backend URL (e.g. https://hillguard-api.onrender.com)
+# and set it as NEXT_PUBLIC_API_URL on the frontend (Vercel or Render static site).
+
+services:
+  - type: web
+    name: hillguard-ai-api
+    runtime: docker
+    plan: free
+    region: singapore          # closest to Indian users; change if you prefer
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11"
+      # Render sets PORT automatically; the Dockerfile reads it.
+      # Ephemeral filesystem — DB reseeds on each deploy (fine for a demo).
+      # For persistence, attach a Render Disk and set:
+      #   HILLGUARD_DB  -> /data/hillguard.db
+      #   UPLOAD_DIR    -> /data/uploads
