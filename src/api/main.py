@@ -27,8 +27,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-UPLOAD_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "uploads")
+UPLOAD_DIR = os.environ.get("UPLOAD_DIR", os.path.join(os.path.dirname(__file__), "..", "..", "uploads"))
 os.makedirs(UPLOAD_DIR, exist_ok=True)
+
+# Serve uploaded field-report photos
+app.mount("/uploads", StaticFiles(directory=UPLOAD_DIR), name="uploads")
 
 model = joblib.load("src/models/random_forest_sikkim.joblib")
 dem_path = "data/terrain/N27E088.hgt"
