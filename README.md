@@ -1,4 +1,5 @@
 # 🛡️ HillGuard AI — Landslide Early Warning & Command Platform
+     Here it is working live: https://hillguard-ai.vercel.app
 
 > **Real-time, hyper-local landslide intelligence for Himalayan lifelines and disaster response teams.**
 
